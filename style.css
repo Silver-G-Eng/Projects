@@ -49,7 +49,7 @@ h1 {
   gap: var(--gap);
   overflow-x: auto;
   padding-bottom: 16px;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: x proximity;
   -webkit-overflow-scrolling: touch;
   cursor: grab;
 }
