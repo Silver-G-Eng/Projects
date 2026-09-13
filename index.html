@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery</title>
+<style>
+  :root {
+    --bg: #fafafa;
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --gap: 20px;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 60px 24px;
+    background: var(--bg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--ink);
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 0 0 40px;
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--gap);
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .box {
+    flex: 1 1 220px;
+    max-width: 260px;
+  }
+
+  .box img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    background: #e0e0e0;
+  }
+
+  .box p {
+    margin: 10px 4px 0;
+    font-size: 0.9rem;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  @media (max-width: 700px) {
+    .box { flex: 1 1 45%; }
+  }
+</style>
+</head>
+<body>
+
+  <h1>My Gallery</h1>
+
+  <div class="gallery">
+    <div class="box">
+      <img src="images/photo1.jpg" alt="Photo 1">
+      <p>Caption one</p>
+    </div>
+    <div class="box">
+      <img src="images/photo2.jpg" alt="Photo 2">
+      <p>Caption two</p>
+    </div>
+    <div class="box">
+      <img src="images/photo3.jpg" alt="Photo 3">
+      <p>Caption three</p>
+    </div>
+    <div class="box">
+      <img src="images/photo4.jpg" alt="Photo 4">
+      <p>Caption four</p>
+    </div>
+  </div>
+
+</body>
+</html>
