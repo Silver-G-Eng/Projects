@@ -12,7 +12,6 @@ if (gallery) {
 
   // Let a normal mouse wheel (vertical scroll) move the gallery horizontally.
   gallery.addEventListener('wheel', (e) => {
-    console.log('wheel event fired', e.deltaY, e.deltaX);
     if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
       e.preventDefault();
       gallery.scrollLeft += e.deltaY;
