@@ -14,7 +14,7 @@ if (gallery) {
   gallery.addEventListener('wheel', (e) => {
     if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
       e.preventDefault();
-      gallery.scrollLeft += e.deltaY;
+      gallery.scrollLeft += e.deltaY * 3;
     }
   }, { passive: false });
 
