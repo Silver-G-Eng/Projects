@@ -1,1 +1,85 @@
 
+:root {
+  --bg: #fafafa;
+  --ink: #1a1a1a;
+  --muted: #6b6b6b;
+  --gap: 20px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 60px 24px;
+  background: var(--bg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  color: var(--ink);
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0 0 40px;
+}
+
+.gallery-wrap {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.gallery-wrap::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: calc(100% - 16px);
+  background: linear-gradient(to right, transparent, var(--bg));
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.gallery-wrap:has(.gallery.at-end)::after {
+  opacity: 0;
+}
+
+.gallery {
+  display: flex;
+  gap: var(--gap);
+  overflow-x: auto;
+  padding-bottom: 16px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* thin, unobtrusive scrollbar */
+.gallery::-webkit-scrollbar { height: 8px; }
+.gallery::-webkit-scrollbar-track { background: transparent; }
+.gallery::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
+
+.box {
+  flex: 0 0 220px;
+  scroll-snap-align: start;
+}
+
+.box img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  background: #e0e0e0;
+}
+
+.box p {
+  margin: 10px 4px 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .box { flex: 0 0 65%; }
+}
