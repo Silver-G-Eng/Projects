@@ -1,225 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery</title>
+<style>
+  :root {
+    --bg: #fafafa;
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+    --gap: 20px;
+  }
 
-    <title>My Engineering Portfolio</title>
+  * { box-sizing: border-box; }
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+  body {
+    margin: 0;
+    padding: 60px 24px;
+    background: var(--bg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--ink);
+  }
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            color: #222;
-        }
+  h1 {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 0 0 40px;
+  }
 
-        .container {
-            max-width: 1100px;
-            margin: 60px auto;
-            padding: 20px;
-        }
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--gap);
+    max-width: 1100px;
+    margin: 0 auto;
+  }
 
-        h1 {
-            text-align: center;
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
+  .box {
+    flex: 1 1 220px;
+    max-width: 260px;
+  }
 
-        .subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 40px;
-        }
+  .box img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    background: #e0e0e0;
+  }
 
-        /* Horizontal project section */
-        .project-list {
-            display: flex;
-            gap: 20px;
+  .box p {
+    margin: 10px 4px 0;
+    font-size: 0.9rem;
+    color: var(--muted);
+    text-align: center;
+  }
 
-            overflow-x: auto;
-            overflow-y: hidden;
-
-            padding: 20px 10px 30px;
-
-            scroll-behavior: smooth;
-        }
-
-        /* Project boxes */
-        .project-box {
-            flex: 0 0 300px;
-
-            background: white;
-
-            border: 1px solid #ddd;
-            border-radius: 15px;
-
-            padding: 25px;
-
-            min-height: 230px;
-
-            cursor: pointer;
-
-            transition: 0.2s;
-        }
-
-        .project-box:hover {
-            transform: translateY(-5px);
-
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        .project-box h2 {
-            margin-top: 0;
-            font-size: 22px;
-        }
-
-        .project-box p {
-            color: #666;
-            line-height: 1.5;
-        }
-
-        .view-project {
-            display: inline-block;
-
-            margin-top: 15px;
-
-            font-weight: bold;
-        }
-
-        /* Optional: hide scrollbar */
-        .project-list::-webkit-scrollbar {
-            height: 8px;
-        }
-
-        .project-list::-webkit-scrollbar-thumb {
-            background: #aaa;
-            border-radius: 10px;
-        }
-    </style>
+  @media (max-width: 700px) {
+    .box { flex: 1 1 45%; }
+  }
+</style>
 </head>
-
 <body>
 
-    <div class="container">
+  <h1>My Gallery</h1>
 
-        <h1>My Engineering Projects</h1>
-
-        <p class="subtitle">
-            Electrical Engineering • Power Systems • Embedded Systems • CAD
-        </p>
-
-
-        <div class="project-list">
-
-            <!-- PROJECT 1 -->
-            <div class="project-box"
-                 onclick="openProject('projects/22kw-facility.html')">
-
-                <h2>22 kW ASIC & GPU Facility</h2>
-
-                <p>
-                    Electrical design, load calculations,
-                    power distribution, equipment sizing,
-                    and project management.
-                </p>
-
-                <span class="view-project">
-                    View Project →
-                </span>
-
-            </div>
-
-
-            <!-- PROJECT 2 -->
-            <div class="project-box"
-                 onclick="openProject('projects/esp32-low-power.html')">
-
-                <h2>ESP32 Low Power System</h2>
-
-                <p>
-                    Wireless embedded system with custom
-                    power management and battery charging.
-                </p>
-
-                <span class="view-project">
-                    View Project →
-                </span>
-
-            </div>
-
-
-            <!-- PROJECT 3 -->
-            <div class="project-box"
-                 onclick="openProject('projects/qr-inventory.html')">
-
-                <h2>QR Inventory System</h2>
-
-                <p>
-                    Computer vision, QR scanning,
-                    Node.js, MongoDB, and analytics.
-                </p>
-
-                <span class="view-project">
-                    View Project →
-                </span>
-
-            </div>
-
-
-            <!-- PROJECT 4 -->
-            <div class="project-box"
-                 onclick="openProject('projects/argb-controller.html')">
-
-                <h2>Low Cost ARGB Fan Controller</h2>
-
-                <p>
-                    ESP32 based controller using a custom
-                    PCB and recycled components.
-                </p>
-
-                <span class="view-project">
-                    View Project →
-                </span>
-
-            </div>
-
-
-            <!-- PROJECT 5 -->
-            <div class="project-box"
-                 onclick="openProject('projects/camera-mount.html')">
-
-                <h2>Modular Camera Mount</h2>
-
-                <p>
-                    CAD designed mounting system for
-                    outdoor residential applications.
-                </p>
-
-                <span class="view-project">
-                    View Project →
-                </span>
-
-            </div>
-
-        </div>
-
+  <div class="gallery">
+    <div class="box">
+      <img src="images/photo1.jpg" alt="Photo 1">
+      <p>Caption one</p>
     </div>
-
-
-    <script>
-
-        function openProject(page) {
-            window.location.href = page;
-        }
-
-    </script>
+    <div class="box">
+      <img src="images/photo2.jpg" alt="Photo 2">
+      <p>Caption two</p>
+    </div>
+    <div class="box">
+      <img src="images/photo3.jpg" alt="Photo 3">
+      <p>Caption three</p>
+    </div>
+    <div class="box">
+      <img src="images/photo4.jpg" alt="Photo 4">
+      <p>Caption four</p>
+    </div>
+  </div>
 
 </body>
-
 </html>
