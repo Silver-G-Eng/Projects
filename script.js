@@ -1,6 +1,3 @@
-// Adds a fading edge on the right side of the gallery while there's
-// more content to scroll to, and removes it once you reach the end.
-
 const gallery = document.getElementById('gallery');
 
 function updateScrollHint() {
