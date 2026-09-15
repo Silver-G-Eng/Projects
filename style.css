@@ -85,7 +85,57 @@ h1 {
   text-align: center;
 }
 
+.text-row {
+  display: flex;
+  gap: var(--gap);
+  max-width: 900px;
+  margin: 0 auto 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
+.text-col {
+  flex: 1 1 220px;
+  max-width: 280px;
+  text-align: center;
+}
+
+.text-col p {
+  line-height: 1.6;
+}
+
+.image-row {
+  display: flex;
+  gap: var(--gap);
+  max-width: 900px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-col {
+  flex: 1 1 220px;
+  max-width: 280px;
+}
+
+.image-col img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.story-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--bg);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
 
 @media (max-width: 700px) {
   .box { flex: 0 0 65%; }
