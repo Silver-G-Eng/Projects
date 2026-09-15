@@ -37,23 +37,7 @@ h2 {
   border-radius: 8px;
 }
 
-.banner {
-  line-height: 1.6;
-  background: #340a83;
-  color: #ffffff;
-  font-weight: 700;
-  padding: 16px 18px;
-  border-radius: 20px;
-}
 
-.banner2 {
-  line-height: 1;
-  background: #ffffff;
-  color: #000000;
-  font-weight: 700;
-  padding: 16px 18px;
-  border-radius: 20px;
-}
 
 .gallery-wrap {
   position: relative;
@@ -116,6 +100,24 @@ h2 {
   font-size: 0.9rem;
   color: var(--muted);
   text-align: center;
+}
+
+.banner {
+  line-height: 1.6;
+  background: #340a83;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 16px 18px;
+  border-radius: 20px;
+}
+
+.banner2 {
+  line-height: 1;
+  background: #ffffff;
+  color: #000000;
+  font-weight: 700;
+  padding: 16px 18px;
+  border-radius: 20px;
 }
 
 .text-row {
