@@ -46,6 +46,15 @@ h2 {
   border-radius: 20px;
 }
 
+.banner2 {
+  line-height: 1;
+  background: #ffffff;
+  color: #000000;
+  font-weight: 700;
+  padding: 16px 18px;
+  border-radius: 20px;
+}
+
 .gallery-wrap {
   position: relative;
   max-width: 1100px;
