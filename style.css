@@ -20,6 +20,10 @@ h1 {
   font-size: 1.6rem;
   font-weight: 600;
   margin: 0 0 40px;
+  background: #000000;
+  color: #ffffff;
+  padding: 16px 24px;
+  border-radius: 8px;
 }
 
 .gallery-wrap {
