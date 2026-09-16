@@ -11,7 +11,7 @@
   <h1>Custom Addressable LED Controller</h1>
 
   <p class="banner" style="text-align:center; max-width:600px; margin:0 auto 30px;">
-      TDevelop firmware and circuits that control up to four ARGB Fans. The firmware uses ESP-32 or STM-32 Remote Control Transceiver (RMT) to generate RX or TX transactions simultaneously. Created an encoder to streamline data. Currently working on managing data and timing using FreeRTOS to control the system behavior.
+      Develop firmware and circuits that control up to four ARGB Fans. The firmware uses ESP-32 or STM-32 Remote Control Transceiver (RMT) to generate RX or TX transactions simultaneously. Created an encoder to streamline data. Currently working on managing data and timing using FreeRTOS to control the system behavior.
   </p>
 
   <div style="text-align:center;">
@@ -20,21 +20,21 @@
 
    <div class="text-row">
       <div class="text-col">
-        <span class="story-num">1</span>
+
         <p>
           ARGB HUBs tend to be expensive and sometimes are not compatible with the motherboard in use. Some options won’t even allow custom designs and controlled by outdated infrared controllers.
         </p>
       </div>
 
       <div class="text-col">
-        <span class="story-num">2</span>
+
         <p>
           Initially the design was composed of an ESP32- WROOM IC, Stepdown circuit, and power filters. Final iteration uses an ESP32 WROOM Development kit. The Firmware uses the ESP32 RMT (Remote Control Transceiver) to send symbols (bits) every 100nS.
         </p>
       </div>
 
       <div class="text-col">
-        <span class="story-num">3</span>
+        
         <p>
           The Device connects to the 4-pin Molex from the PSU. ARGB devices are connected to their respective pins. Device is controlled by establishing a Wi-Fi connection and GUI is Web Browser based.
         </p>
